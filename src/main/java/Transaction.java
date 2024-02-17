@@ -6,6 +6,14 @@ public class Transaction {
 	private int value ;
 	private String description;
 	private Date date;
+	
+	
+	 public Transaction(String type, int value, String description, Date date) {
+	        this.type = type;
+	        this.value = value;
+	        this.description = description;
+	        this.date = date;
+	    }
 
 	public String getType() {
 		return type;
@@ -39,19 +47,13 @@ public class Transaction {
 		this.date = date;
 	}
 	
-	 public Transaction(String type, int value, String description, Date date) {
-	        this.type = type;
-	        this.value = value;
-	        this.description = description;
-	        this.date = date;
-	    }
+	
 	 
 	 public String toString() {
-		 return "Transaction{" +
-	                "type='" + type + 
+		 return "Transaction{" + "type='" + type + 
 	                ", value=" + value +
-	                ", description='" + description + '\'' +
-	                ", date=" +  '}';
+	                ", description='" + description +
+	              ", date=" +date +  '}';
 	 }
 	
 
