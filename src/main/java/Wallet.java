@@ -26,6 +26,32 @@ public class Wallet {
     public void addTransaction(Transaction transaction) {
         transactions.add(transaction);
     }
+    
+    
+    public void deposit(int amount) {
+    	if (amount >0) {
+    		this.value+=amount;
+            System.out.println("Deposited: " + amount);
+
+    	}
+    	
+    	else {
+    		System.out.println("Invalid deposit amount");
+    	}
+    }
+    	
+    public void withdraw (int amount) {
+    	if (amount <0)
+    	{
+    		this.value-=amount;
+    		System.out.println("Withdrawn:" + amount);
+    	}
+    	 else {
+             System.out.println("Invalid withdrawal ");
+         }
+    		
+    	}
+    
 
     @Override
     public String toString() {
